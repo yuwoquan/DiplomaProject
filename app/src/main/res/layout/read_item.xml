@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+app:cardBackgroundColor="#e6abe3"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="60dp"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_margin="5dp"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_weight="3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/start"
+            android:clickable="true"
+            android:id="@+id/iv_head"
+            app:qmui_is_circle="true"
+            app:qmui_border_color="#ce348b"
+            app:qmui_border_width="5px"
+            android:layout_gravity="center"
+            app:qmui_selected_border_color="?attr/qmui_config_color_gray_4"
+            app:qmui_selected_border_width="10px"
+            app:qmui_selected_mask_color="?attr/qmui_config_color_gray_8"/>
+
+        <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:src="@drawable/video"
+            app:qmui_border_color="#efebeb"
+            app:qmui_border_width="3px"
+            app:qmui_is_circle="true"
+            app:qmui_selected_border_color="?attr/qmui_config_color_gray_4"
+            app:qmui_selected_border_width="10px"
+            app:qmui_selected_mask_color="?attr/qmui_config_color_gray_8" />
+    </FrameLayout>
+<TextView
+    android:id="@+id/des"
+    android:maxLines="6"
+    android:layout_marginRight="30dp"
+    android:ellipsize="end"
+    android:text="我不否认，有些看上去很高情商的人，确实是那种两面三刀、虚与委蛇的人。不过在正确的认知里，高情商的人并不单单体现在为人处事的技巧上，更多的是体现在自我情绪调控和面对挫折时的行为反映。"
+    android:layout_weight="2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+</TextView>
+</LinearLayout>
+</android.support.v7.widget.CardView>
