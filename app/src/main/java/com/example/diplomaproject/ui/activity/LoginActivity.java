@@ -19,6 +19,7 @@ import com.example.diplomaproject.MainActivity;
 import com.example.diplomaproject.MyApplication;
 import com.example.diplomaproject.R;
 import com.example.diplomaproject.enity.MyUser;
+import com.qmuiteam.qmui.util.QMUIStatusBarHelper;
 import com.qmuiteam.qmui.widget.dialog.QMUITipDialog;
 
 import butterknife.BindView;
@@ -47,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
-
+        QMUIStatusBarHelper.translucent(this); // 沉浸式状态栏
         tvSignupInvoker = (TextView) findViewById(R.id.tvSignupInvoker);
         tvSigninInvoker = (TextView) findViewById(R.id.tvSigninInvoker);
         iname=findViewById(R.id.name);

@@ -52,4 +52,5 @@ dependencies {
     compile 'com.qmuiteam:arch:0.0.1'
     compile 'com.android.support:percent:24.2.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
 }
