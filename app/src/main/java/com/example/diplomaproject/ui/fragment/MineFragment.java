@@ -23,8 +23,5 @@ public class MineFragment extends BaseFragment {
         FrameLayout layout = (FrameLayout) LayoutInflater.from(getActivity()).inflate(R.layout.fragment_mine, null);
         return layout;
     }
-    @Override
-    protected boolean canDragBack() {
-        return false;
-    }
+
 }

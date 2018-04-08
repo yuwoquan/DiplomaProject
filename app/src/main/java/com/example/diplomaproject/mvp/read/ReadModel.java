@@ -1,4 +1,4 @@
-package com.example.diplomaproject.mvp.read.model;
+package com.example.diplomaproject.mvp.read;
 
 import android.content.Context;
 import android.util.Log;
@@ -40,6 +40,7 @@ public class ReadModel {
         BmobQuery<ReadBean> query = new BmobQuery<>();
         query.include("author");
         query.order("-createdAt");
+
         if (actionType == STATE_MORE) {
             Date date = null;
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

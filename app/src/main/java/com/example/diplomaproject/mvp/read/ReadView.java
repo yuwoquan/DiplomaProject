@@ -1,4 +1,4 @@
-package com.example.diplomaproject.mvp.read.view;
+package com.example.diplomaproject.mvp.read;
 
 import com.example.diplomaproject.enity.ReadBean;
 import com.example.diplomaproject.mvp.base.IMvpBaseView;

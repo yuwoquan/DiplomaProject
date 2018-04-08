@@ -1,6 +1,8 @@
 package com.example.diplomaproject.ui.base;
 
 
+import android.view.KeyEvent;
+
 import com.qmuiteam.qmui.arch.QMUIFragment;
 
 /**
@@ -14,5 +16,6 @@ public  abstract class BaseFragment extends QMUIFragment {
         double statusBarHeight = Math.ceil(25 * fragment.getResources().getDisplayMetrics().density);
         return (int) statusBarHeight;
     }
+
 
 }

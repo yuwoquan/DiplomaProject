@@ -31,5 +31,6 @@ public class ReadViewHolder extends BaseViewHolder<ReadBean> {
         super.setData(data);
         description.setText(data.getDetail());
         Glide.with(MyApplication.getContext()).load(data.getJpg().getUrl()).into(imageView);
+
     }
 }

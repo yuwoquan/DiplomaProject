@@ -1,4 +1,4 @@
-package com.example.diplomaproject.mvp.read.presenter;
+package com.example.diplomaproject.mvp.read;
 
 import android.os.Handler;
 import android.util.Log;
@@ -7,8 +7,6 @@ import com.example.diplomaproject.MyApplication;
 import com.example.diplomaproject.enity.ReadBean;
 import com.example.diplomaproject.mvp.base.AbstractMvpPersenter;
 import com.example.diplomaproject.mvp.base.IBaseListCallBack;
-import com.example.diplomaproject.mvp.read.model.ReadModel;
-import com.example.diplomaproject.mvp.read.view.ReadView;
 
 import java.util.List;
 

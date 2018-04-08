@@ -98,14 +98,14 @@
     <style name="tv_title">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">20dp</item>
+        <item name="android:textSize">15dp</item>
         <item name="android:gravity">center_vertical|left</item>
         <item name="android:textColor">#242424</item>
     </style>
     <style name="main_tv">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">14dp</item>
+        <item name="android:textSize">12dp</item>
         <item name="android:gravity">center_vertical|left</item>
         <item name="android:textColor">#878787</item>
     </style>
