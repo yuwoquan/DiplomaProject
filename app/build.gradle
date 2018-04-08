@@ -45,12 +45,11 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.4.0'
     testCompile 'junit:junit:4.12'
     compile 'cn.jzvd:jiaozivideoplayer:6.2.7'
-    compile 'com.qmuiteam:qmui:1.0.6'
+    compile 'com.qmuiteam:qmui:1.1.0'
     compile('com.squareup.okhttp3:logging-interceptor:3.2.0')
             { exclude group: 'com.squareup.okhttp3' }
     compile 'com.qmuiteam:qmuilint:1.0.1'
     compile 'com.qmuiteam:arch:0.0.1'
     compile 'com.android.support:percent:24.2.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
-    compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
 }

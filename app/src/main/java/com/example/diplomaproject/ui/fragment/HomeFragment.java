@@ -13,7 +13,6 @@ import com.example.diplomaproject.enity.ReadBean;
 import com.example.diplomaproject.mvp.base.AbstractMvpFragment;
 import com.example.diplomaproject.mvp.read.presenter.ReadPresener;
 import com.example.diplomaproject.mvp.read.view.ReadView;
-import com.jakewharton.rxbinding2.view.RxView;
 import com.jude.easyrecyclerview.EasyRecyclerView;
 import com.qmuiteam.qmui.widget.QMUITopBar;
 
