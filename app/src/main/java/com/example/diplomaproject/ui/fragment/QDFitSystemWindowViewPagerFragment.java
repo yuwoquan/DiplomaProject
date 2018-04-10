@@ -1,49 +1,48 @@
 package com.example.diplomaproject.ui.fragment;
 
 import android.annotation.SuppressLint;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.TypedValue;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.TextView;
 
 import com.example.diplomaproject.R;
 import com.example.diplomaproject.ui.base.BaseFragment;
-import com.example.diplomaproject.utils.util.NoScrollViewPager;
 import com.qmuiteam.qmui.util.QMUIResHelper;
 import com.qmuiteam.qmui.widget.QMUIPagerAdapter;
 import com.qmuiteam.qmui.widget.QMUITabSegment;
 
-import java.util.HashMap;
-import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.Unbinder;
+
+/**
+ * @author cginechen
+ * @date 2017-09-13
+ */
 
 
-public class TabFragment extends BaseFragment {
+public class QDFitSystemWindowViewPagerFragment extends BaseFragment {
 
     @BindView(R.id.pager)
-    NoScrollViewPager mViewPager;
+    ViewPager mViewPager;
     @BindView(R.id.tabs)
     QMUITabSegment mTabSegment;
 
+
     @Override
     protected View onCreateView() {
-        FrameLayout layout = (FrameLayout) LayoutInflater.from(getActivity()).inflate(R.layout.fragment_tab, null);
+        FrameLayout layout = (FrameLayout) LayoutInflater.from(getActivity()).inflate(R.layout.fragment_fsw_viewpager, null);
         ButterKnife.bind(this, layout);
-        initPagers();
         initTabs();
+        initPagers();
         return layout;
     }
+
     private void initTabs() {
         int normalColor = QMUIResHelper.getAttrColor(getActivity(), R.attr.qmui_config_color_gray_6);
         int selectColor = QMUIResHelper.getAttrColor(getActivity(), R.attr.qmui_config_color_blue);
@@ -68,17 +67,16 @@ public class TabFragment extends BaseFragment {
         mTabSegment.addTab(component);
         mTabSegment.addTab(util);
         mTabSegment.addTab(utill);
-        mTabSegment.notifyDataChanged();
     }
 
     private void initPagers() {
         QMUIPagerAdapter pagerAdapter = new QMUIPagerAdapter() {
             private FragmentTransaction mCurrentTransaction;
-            private android.support.v4.app.Fragment mCurrentPrimaryItem = null;
+            private Fragment mCurrentPrimaryItem = null;
 
             @Override
             public boolean isViewFromObject(View view, Object object) {
-                return view == ((android.support.v4.app.Fragment) object).getView();
+                return view == ((Fragment) object).getView();
             }
 
             @Override
@@ -96,7 +94,6 @@ public class TabFragment extends BaseFragment {
                     case 2:
                     default:
                         return "About";
-
                 }
             }
 
@@ -108,7 +105,6 @@ public class TabFragment extends BaseFragment {
                     case 1:
                         return new MineFragment();
                     case 2:
-
                     default:
                         return new ThingKingFragment();
                 }
@@ -122,11 +118,11 @@ public class TabFragment extends BaseFragment {
                     mCurrentTransaction = getChildFragmentManager()
                             .beginTransaction();
                 }
-                android.support.v4.app.Fragment fragment = getChildFragmentManager().findFragmentByTag(name);
+                Fragment fragment = getChildFragmentManager().findFragmentByTag(name);
                 if (fragment != null) {
                     mCurrentTransaction.attach(fragment);
                 } else {
-                    fragment = (android.support.v4.app.Fragment) item;
+                    fragment = (Fragment) item;
                     mCurrentTransaction.add(container.getId(), fragment, name);
                 }
                 if (fragment != mCurrentPrimaryItem) {
@@ -142,7 +138,7 @@ public class TabFragment extends BaseFragment {
                     mCurrentTransaction = getChildFragmentManager()
                             .beginTransaction();
                 }
-                mCurrentTransaction.detach((android.support.v4.app.Fragment) object);
+                mCurrentTransaction.detach((Fragment) object);
             }
 
             @Override
@@ -163,7 +159,7 @@ public class TabFragment extends BaseFragment {
 
             @Override
             public void setPrimaryItem(ViewGroup container, int position, Object object) {
-                android.support.v4.app.Fragment fragment = (android.support.v4.app.Fragment) object;
+                Fragment fragment = (Fragment) object;
                 if (fragment != mCurrentPrimaryItem) {
                     if (mCurrentPrimaryItem != null) {
                         mCurrentPrimaryItem.setMenuVisibility(false);
@@ -184,5 +180,4 @@ public class TabFragment extends BaseFragment {
         mViewPager.setAdapter(pagerAdapter);
         mTabSegment.setupWithViewPager(mViewPager,false);
     }
-
 }

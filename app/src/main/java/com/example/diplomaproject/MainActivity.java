@@ -7,6 +7,7 @@ import android.os.Bundle;
 import com.example.diplomaproject.ui.base.BaseActivity;
 import com.example.diplomaproject.ui.base.BaseFragment;
 import com.example.diplomaproject.ui.fragment.HomeFragment;
+import com.example.diplomaproject.ui.fragment.QDFitSystemWindowViewPagerFragment;
 import com.example.diplomaproject.ui.fragment.TabFragment;
 import com.qmuiteam.qmui.arch.QMUIFragment;
 import com.qmuiteam.qmui.arch.QMUIFragmentActivity;
@@ -26,7 +27,7 @@ public class MainActivity extends BaseActivity{
 //        QMUIStatusBarHelper.translucent(this); // 沉浸式状态栏
         if (savedInstanceState == null) {
 //            BaseFragment fragment = new HomeFragment();
-            BaseFragment fragment = new TabFragment();
+            BaseFragment fragment = new QDFitSystemWindowViewPagerFragment();
             getSupportFragmentManager()
                     .beginTransaction()
                     .add(getContextViewId(), fragment, fragment.getClass().getSimpleName())

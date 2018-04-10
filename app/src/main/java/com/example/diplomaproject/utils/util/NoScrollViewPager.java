@@ -5,11 +5,13 @@ import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
+import com.qmuiteam.qmui.widget.QMUIViewPager;
+
 /**
  * Created by 鱼握拳 on 2018/4/10.
  */
 
-public class NoScrollViewPager extends ViewPager {
+public class NoScrollViewPager extends QMUIViewPager {
     private boolean isScroll;
     public NoScrollViewPager(Context context, AttributeSet attrs ){
         super(context, attrs);
