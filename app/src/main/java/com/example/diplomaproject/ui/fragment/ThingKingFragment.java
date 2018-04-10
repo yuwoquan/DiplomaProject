@@ -62,7 +62,10 @@ public class ThingKingFragment extends AbstractMvpFragment<ThinkView, ThinkPesen
     public void requestLoading() {
 
     }
-
+    @Override
+    protected boolean canDragBack() {
+        return false;
+    }
     @Override
     public void resultSuccess(List<ThinkingBean> result) {
             thingKingAdapter.addAll(result);
